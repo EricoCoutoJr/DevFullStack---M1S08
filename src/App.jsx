@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import CardAdicionar from './models/CardAdicionar';
+import ListaTarefas from './models/ListaTarefas';
 
 function App() {
   const [tarefas, setTarefas] = useState([]);
@@ -11,7 +12,8 @@ function App() {
 
   return (
     <div>
-      <CardAdicionar />
+      <CardAdicionar quandoAdicionar={addTarefa} />
+      <ListaTarefas tarefas={tarefas} />
     </div>
   );
 }

@@ -11,14 +11,16 @@ function CardAdicionar(props) {
       return true;
     } else {
       // Neste alert ele irá adicionar a mensagem abaixo
-      alert('Para adicionar necessário preencher a tarefa');
+      alert('Para adicionar necessário informar a tarefa');
       return false;
     }
   }
   function handleAddTarefa(event) {
     event.preventDefault();
+    const id = 0;
     if (validarCampos()) {
       const job = {
+        id: id,
         tarefa: tarefa,
         efetuada: efetuada,
       };
@@ -43,7 +45,7 @@ function CardAdicionar(props) {
             aria-label="Inserir Tarefa"
             type="text"
             value={tarefa}
-            onChange={evento => setarefa(evento.target.value)}
+            onChange={evento => setTarefa(evento.target.value)}
           />
         </div>
         <div className="col-2">
