@@ -6,7 +6,7 @@ function App() {
   const [tarefas, setTarefas] = useState([]);
 
   function addTarefa(tarefa) {
-    setNegociacoes([...tarefas, tarefa]);
+    setTarefas([...tarefas, tarefa]);
   }
 
   return (
