@@ -70,6 +70,6 @@ function ListaTarefas(props) {
 }
 ListaTarefas.propType = {
   job: PropTypes.array.isRequired,
-  quandoDeletar: PropTypes.func,
+  quandoDeletar: PropTypes.func.isRequired,
 };
 export default ListaTarefas;
