@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function CardAdicionar(props) {
   const [tarefa, setTarefa] = useState('');
   const [efetuada, setEfetuada] = useState(false);
+  const [id, setId] = useState('');
 
   function validarCampos() {
-    let msn = '';
     if (tarefa) {
       return true;
     } else {
@@ -17,7 +17,6 @@ function CardAdicionar(props) {
   }
   function handleAddTarefa(event) {
     event.preventDefault();
-    const id = 0;
     if (validarCampos()) {
       const job = {
         id: id,
@@ -27,7 +26,6 @@ function CardAdicionar(props) {
       // Executando a função recebida pela props
       // para adicionar a 'negociacao' e enviada pelo App
       props.quandoAdicionar(job);
-
       // Depois de enviar os valores dos inputs para
       // dentro do objeto negociação é necessário zerá-los
       setTarefa('');
